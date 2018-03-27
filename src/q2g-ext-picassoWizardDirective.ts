@@ -1,13 +1,14 @@
 //#region Imports
 import { utils,
-         logging }              from "../node_modules/davinci.js/dist/umd/daVinci";
+         logging }              from "../node_modules/davinci.js/dist/esm/daVinci";
 import * as qvangular           from "qvangular";
 import * as template            from "text!./q2g-ext-picassoWizardDirective.html";
 import * as picassoImport       from "../node_modules/picasso.js/dist/picasso";
 import * as picassoQ            from "../node_modules/picasso-plugin-q/dist/picasso-q";
 import * as  picassoHammer      from "../node_modules/picasso-plugin-hammer/dist/picasso-hammer";
-import "../node_modules/ace-builds/src/ace";
-import "css!./q2g-ext-picassoWizardDirective.css";
+//import "../node_modules/ace-builds/src/ace";
+import * as ace from '../node_modules/ace-builds/src-noconflict/ace';
+import "./q2g-ext-picassoWizardDirective.less";
 //#endregion
 
 //#region declaration of const

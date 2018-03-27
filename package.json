@@ -9,14 +9,29 @@
   },
   "author": "Thomas Häning, Konrad Mattheis (qlik2go) ",
   "devDependencies": {
+    "@types/ace": "0.0.36",
     "@types/angular": "1.6.39",
     "@types/jquery": "3.2.16",
     "@types/qlik-engineapi": "^12.67.0",
     "@types/qlik-visualizationextensions": "^4.0.2",
-    "@types/ace": "0.0.36",
-    "typescript": "^2.6.2",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.3.0",
+    "cross-env": "^5.1.1",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.6",
     "gulp": "^3.9.1",
-    "gulp-less": "^3.3.2"
+    "gulp-less": "^4.0.0",
+    "less": "^3.0.1",
+    "less-loader": "^4.0.6",
+    "postcss-loader": "^2.0.9",
+    "precss": "^2.0.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.19.1",
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "uglifyjs-webpack-plugin": "^1.1.4",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
   },
   "dependencies": {
     "ace-builds": "^1.2.9",
@@ -26,6 +41,9 @@
     "picasso-plugin-hammer": "0.5.3"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json && gulp less"
+    "build": "tsc -p tsconfig.json && gulp less",
+    "build:dev:watch": "cross-env NODE_ENV=dev webpack --watch --color --display-error-details",
+    "build:dev": "cross-env NODE_ENV=dev webpack --color --display-error-details",
+    "build:prod": "cross-env NODE_ENV=prod webpack --progress --color --display-error-details"
   }
 }
